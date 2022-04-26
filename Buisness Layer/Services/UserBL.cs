@@ -60,6 +60,18 @@ namespace Buisness_Layer.Services
                 throw ex;
             }
         }
+        public List<User> GetAllUsers()
+        {
+            try
+            {
+                return userRL.GetAllUsers();
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public bool DeleteUser(string email)
         {
             try

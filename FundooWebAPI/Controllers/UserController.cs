@@ -40,7 +40,7 @@ namespace FundooWebAPI.Controllers
                 throw ex;
             }
         }
-        [HttpPost("Login")]
+        [HttpPost("Login/{Email}/{Password}")]
         public ActionResult LoginUser(string Email, string Password)
         {
             try
@@ -79,7 +79,7 @@ namespace FundooWebAPI.Controllers
         //        throw ex;
         //    }
         //}
-        [HttpPost("ForgetPassword")]
+        [HttpPost("ForgetPassword/{email}")]
         public IActionResult ForgetPassword(string email)
         {
             try
@@ -103,7 +103,7 @@ namespace FundooWebAPI.Controllers
             }
         }
         [Authorize]
-        [HttpPut("ChangePassword")]
+        [HttpPut("ChangePassword/{confirmpassword}")]
         public IActionResult ChangePassword(string password, string confirmpassword)
         {
             try
@@ -130,6 +130,20 @@ namespace FundooWebAPI.Controllers
             {
                 throw ex;
             }
+        }
+        [HttpGet("getallusers")]
+        public ActionResult GetAllUsers()
+        {
+            try
+            {
+                var result = this.userBL.GetAllUsers();
+                return this.Ok(new { success = true, message = $"Below are the User data", data = result });
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
         }
     }
 }

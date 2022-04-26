@@ -13,5 +13,6 @@ namespace Repository_Layer.Interface
         public bool ForgetPassword(string Email);
         public bool ChangePassword(string email, string password, string confirmPassword);
         public bool DeleteUser(string email);
+        List<User> GetAllUsers();
     }
 }

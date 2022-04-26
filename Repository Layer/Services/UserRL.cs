@@ -209,6 +209,19 @@ namespace Repository_Layer.Services
             }
         }
 
+        public List<User> GetAllUsers()
+        {
+            try
+            {
+                var result = fundoo.Users.ToList();
+                return result;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public bool DeleteUser(string email)
         {
             // throw new NotImplementedException();
