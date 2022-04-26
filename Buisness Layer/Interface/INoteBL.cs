@@ -11,5 +11,7 @@ namespace Buisness_Layer.Interface
     {
         public  Task AddNote(NotePostModel notePostModel, int userId);
         public Task<Note> GetNote(int noteId, int userId);
+        Task<Note> UpdateNote(NotePostModel notePostModel, int noteId, int userId);
+        Task DeleteNote(int noteId, int userId);
     }
 }

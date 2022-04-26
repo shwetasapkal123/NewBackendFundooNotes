@@ -13,7 +13,7 @@ namespace Repository_Layer.Context
         {
         }
         public DbSet<Entity.User> Users { get; set; }
-        public DbSet<Entity.Note> Notes { get; set; }
+        public DbSet<Note> Note { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

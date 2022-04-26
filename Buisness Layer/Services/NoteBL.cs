@@ -39,5 +39,27 @@ namespace Buisness_Layer.Services
                 throw ex;
             }
         }
+        public  Task<Note> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
+        {
+            try
+            {
+                return  this.noteRL.UpdateNote(notePostModel, noteId, userId);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public Task DeleteNote(int noteId, int userId)
+        {
+            try
+            {
+                return this.noteRL.DeleteNote(noteId, userId);
+            }
+            catch( Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

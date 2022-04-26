@@ -48,7 +48,34 @@ namespace FundooWebAPI.Controllers
             try
             {
                 var result = await this.noteBL.GetNote(noteId,userId);
-                return this.Ok(new { success = true, message = $"Below are the User data",data=result });
+                return this.Ok(new { success = true, message = $"Below are the Note data",data=result });
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+     
+        [HttpPut("Update")]
+        public async Task<ActionResult> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
+        {
+            try
+            {
+                var result = await this.noteBL.UpdateNote(notePostModel,noteId, userId);
+                return this.Ok(new { success = true, message = $"Note updated successfully!!!", data = result });
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [HttpDelete("Delete")]
+        public async Task<ActionResult> DeleteNote(int noteId, int userId)
+        {
+            try
+            {
+                await this.noteBL.DeleteNote(noteId, userId);
+                return this.Ok(new { success = true, message = "Note deleted successfully!!!"});
             }
             catch(Exception ex)
             {

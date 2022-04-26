@@ -12,7 +12,9 @@ C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWeb
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\FundooWebAPI.runtimeconfig.dev.json
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\FundooWebAPI.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\FundooWebAPI.pdb
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -34,7 +36,11 @@ C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWeb
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
@@ -66,10 +72,3 @@ C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWeb
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\obj\Debug\netcoreapp3.1\FundooWebAPI.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\obj\Debug\netcoreapp3.1\FundooWebAPI.pdb
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\obj\Debug\netcoreapp3.1\FundooWebAPI.genruntimeconfig.cache
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\obj\Debug\netcoreapp3.1\FundooWebAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
-C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\New folder\FundooWebAPI\FundooWebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

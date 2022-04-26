@@ -29,11 +29,11 @@ namespace Repository_Layer.Migrations
                     b.Property<string>("BGColor")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
 
                     b.Property<bool>("IsArchive")
                         .HasColumnType("bit");
@@ -47,17 +47,20 @@ namespace Repository_Layer.Migrations
                     b.Property<bool>("IsTrash")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("NoteId");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Notes");
+                    b.ToTable("Note");
                 });
 
             modelBuilder.Entity("Repository_Layer.Entity.User", b =>
@@ -98,7 +101,9 @@ namespace Repository_Layer.Migrations
                 {
                     b.HasOne("Repository_Layer.Entity.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
