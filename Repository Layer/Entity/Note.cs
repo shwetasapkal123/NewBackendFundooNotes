@@ -18,7 +18,7 @@ namespace Repository_Layer.Entity
         public bool IsReminder { get; set; }
         public bool IsPin { get; set; }
         public bool IsTrash { get; set; }
-        public int Id { get; set; }
+        public int UserId { get; set; }
         public virtual User User { get; set; }
     }
 }

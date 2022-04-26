@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository_Layer.Context;
+using Repository_Layer.Entity;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,9 +38,22 @@ namespace FundooWebAPI.Controllers
             catch (Exception ex)
             {
                 throw ex;
-            }
-            
+            }           
 
+        }
+        [Authorize]
+        [HttpGet("Get/{noteId}")]
+        public async Task<ActionResult> GetNote(int noteId, int userId)
+        {
+            try
+            {
+                var result = await this.noteBL.GetNote(noteId,userId);
+                return this.Ok(new { success = true, message = $"Below are the User data",data=result });
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

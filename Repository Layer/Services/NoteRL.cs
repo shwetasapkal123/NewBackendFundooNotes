@@ -1,4 +1,5 @@
 ﻿using Database_Layer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Repository_Layer.Context;
 using Repository_Layer.Entity;
@@ -55,7 +56,7 @@ namespace Repository_Layer.Services
             {
                 try
                 {
-                    return await fundoo.Orders.Where(u => u.NoteId == noteId && u.UserId == userId)
+                    return await fundoo.Notes.Where(u => u.NoteId == noteId && u.UserId == userId)
                     .Include(u => u.User).FirstOrDefaultAsync();
                 }
                 catch(Exception ex)
