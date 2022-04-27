@@ -39,11 +39,11 @@ namespace Buisness_Layer.Services
                 throw ex;
             }
         }
-        public  Task<Note> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
+        public async Task<Note> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
         {
             try
             {
-                return  this.noteRL.UpdateNote(notePostModel, noteId, userId);
+                return await this.noteRL.UpdateNote(notePostModel, noteId, userId);
             }
             catch(Exception ex)
             {

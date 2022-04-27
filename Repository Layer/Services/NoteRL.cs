@@ -39,10 +39,10 @@ namespace Repository_Layer.Services
                     note.Title = notePostModel.Title;
                     note.Description = notePostModel.Description;
                     note.BGColor = notePostModel.BGColor;
-                    note.IsArchive = notePostModel.IsArchive;
-                    note.IsReminder = notePostModel.IsReminder;
-                    note.IsPin = notePostModel.IsPin;
-                    note.IsTrash = notePostModel.IsTrash;
+                    note.IsArchive = false;
+                    note.IsReminder = false;
+                    note.IsPin = false;
+                    note.IsTrash = false;
 
                     fundoo.Add(note);
                     await fundoo.SaveChangesAsync();
@@ -81,17 +81,16 @@ namespace Repository_Layer.Services
         {
             try
             {
-                var res =  fundoo.Note.Where(u => u.NoteId == noteId && u.UserId == userId).FirstOrDefaultAsync();
+                var res =  fundoo.Note.FirstOrDefault(u => u.NoteId == noteId && u.UserId == userId);
                 if (res != null)
                 {
-                    Note note = new Note();
-                    note.Title = notePostModel.Title;
-                    note.Description = notePostModel.Description;
-                    note.BGColor = notePostModel.BGColor;
-                    note.IsArchive = notePostModel.IsArchive;
-                    note.IsReminder = notePostModel.IsReminder;
-                    note.IsPin = notePostModel.IsPin;
-                    note.IsTrash = notePostModel.IsTrash;
+                    res.Title = notePostModel.Title;
+                    res.Description = notePostModel.Description;
+                    res.BGColor = notePostModel.BGColor;
+                    res.IsArchive = notePostModel.IsArchive;
+                    res.IsReminder = notePostModel.IsReminder;
+                    res.IsPin = notePostModel.IsPin;
+                    res.IsTrash = notePostModel.IsTrash;
                     await fundoo.SaveChangesAsync();
                     
                     return await fundoo.Note.Where(a => a.NoteId == noteId).FirstOrDefaultAsync();

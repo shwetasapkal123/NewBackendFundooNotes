@@ -55,12 +55,14 @@ namespace FundooWebAPI.Controllers
                 throw ex;
             }
         }
-     
-        [HttpPut("Update")]
-        public async Task<ActionResult> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
+        [Authorize]
+        [HttpPut("Update/{noteId}")]
+        public async Task<IActionResult> UpdateNote(NotePostModel notePostModel, int noteId)
         {
             try
             {
+                var userid = User.Claims.FirstOrDefault(x => x.Type.ToString().Equals("userId", StringComparison.InvariantCultureIgnoreCase));
+                int userId = Int32.Parse(userid.Value);
                 var result = await this.noteBL.UpdateNote(notePostModel,noteId, userId);
                 return this.Ok(new { success = true, message = $"Note updated successfully!!!", data = result });
             }
@@ -69,11 +71,14 @@ namespace FundooWebAPI.Controllers
                 throw ex;
             }
         }
-        [HttpDelete("Delete")]
-        public async Task<ActionResult> DeleteNote(int noteId, int userId)
+        [Authorize]
+        [HttpDelete("Delete/{noteId}")]
+        public async Task<ActionResult> DeleteNote(int noteId)
         {
             try
             {
+                var userid = User.Claims.FirstOrDefault(x => x.Type.ToString().Equals("userId", StringComparison.InvariantCultureIgnoreCase));
+                int userId = Int32.Parse(userid.Value);
                 await this.noteBL.DeleteNote(noteId, userId);
                 return this.Ok(new { success = true, message = "Note deleted successfully!!!"});
             }
