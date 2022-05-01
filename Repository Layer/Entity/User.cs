@@ -22,5 +22,7 @@ namespace Repository_Layer.Entity
         public string Password { get; set; }
 
         public DateTime registerdDate { get; set; }
+
+        public ICollection<Label> Labels { get; set; }
     }
 }
