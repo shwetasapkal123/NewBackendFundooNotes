@@ -15,6 +15,8 @@ namespace Repository_Layer.Context
         public DbSet<Entity.User> Users { get; set; }
         public DbSet<Note> Note { get; set; }
         public DbSet<Label> Labels { get; set; }
+        public DbSet<Collaborator> Collaborators { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
