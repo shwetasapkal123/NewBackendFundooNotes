@@ -50,6 +50,17 @@ namespace Buisness_Layer.Services
                 throw ex;
             }
         }
+        public async Task<List<Note>> GetAllNotes_ByRadisCache()
+        {
+            try
+            {
+                return await this.noteRL.GetAllNotes_ByRadisCache();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
         public async Task<Note> UpdateNote(NotePostModel notePostModel, int noteId, int userId)
         {
             try

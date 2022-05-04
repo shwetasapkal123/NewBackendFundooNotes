@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Buisness_Layer.Services
 {
-    public class UserBL: IUserBL
+    public class UserBL : IUserBL
     {
         IUserRL userRL;
         public UserBL(IUserRL userRL)

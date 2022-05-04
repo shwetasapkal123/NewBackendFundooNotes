@@ -48,6 +48,12 @@ namespace FundooWebAPI
 
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+            services.AddMemoryCache();
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = "localhost:6379";
+            });
+
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -89,6 +95,12 @@ namespace FundooWebAPI
                     { jwtSecurityScheme, Array.Empty<string>() }
                 });
             });
+            services.AddDistributedRedisCache(
+                options =>
+                {
+                    options.Configuration = "Localhost:6379";
+                }
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
